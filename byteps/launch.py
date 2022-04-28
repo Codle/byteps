@@ -228,10 +228,6 @@ def is_joint_mode():
     return os.getenv("BYTEPS_FORCE_JOINT_MODE", "0").lower() in ["1", "true"]
 
 
-def is_colate_mode():
-    return
-
-
 def worker_fn(local_rank, local_size, command, allocation=None):
     my_env = os.environ.copy()
     my_env["BYTEPS_LOCAL_RANK"] = str(local_rank)
